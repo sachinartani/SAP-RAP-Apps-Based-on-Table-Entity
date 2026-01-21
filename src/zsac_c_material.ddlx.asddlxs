@@ -1,0 +1,20 @@
+@Metadata.layer: #CORE
+annotate entity zsac_c_material
+    with 
+{
+    @UI.facet: [{ id: 'Header', type: #IDENTIFICATION_REFERENCE, label: 'Material', purpose: #STANDARD }]
+    @UI.lineItem: [ { position: 10, label: 'Material No' } ]
+    @UI.identification: [ { position: 10, label: 'Material No' } ]
+    @UI.selectionField: [ { position: 10 } ]
+    material_no;
+    @UI.lineItem: [ { position: 20, label: 'Description' } ]
+    @UI.identification: [ { position: 20, label: 'Description' } ]
+    material_desc;
+    @UI.lineItem: [ { position: 30, label: 'Material Type' } ]
+    @UI.identification: [ { position: 30, label: 'Material Type' } ]
+    material_type;
+    @UI.lineItem: [ { position: 40, label: 'Material Group' } ]
+    @UI.identification: [ { position: 40, label: 'Material Group' } ]
+    material_group;
+    
+}

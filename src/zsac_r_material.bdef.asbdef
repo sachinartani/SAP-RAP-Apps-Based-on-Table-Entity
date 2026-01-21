@@ -1,0 +1,12 @@
+managed implementation in class zsac_cl_bp_r_material unique;
+strict ( 2 );
+
+define behavior for ZSAC_R_MATERIAL alias Material
+lock master
+authorization master ( instance )
+{
+  create ( authorization : global );
+  update;
+  delete;
+ // field ( readonly ) material_no;
+}

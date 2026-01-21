@@ -1,0 +1,2 @@
+@EndUserText.label: 'Billing Document ID'
+define type zsac_st_bill_id: abap.numc(10)

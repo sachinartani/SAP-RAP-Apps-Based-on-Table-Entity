@@ -1,0 +1,2 @@
+@EndUserText.label: 'Net Amount'
+define type zsac_st_net_amount: abap.curr(15,2)

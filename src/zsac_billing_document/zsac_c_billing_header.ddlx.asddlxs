@@ -1,0 +1,96 @@
+@Metadata.layer: #CORE
+@UI: { headerInfo: { typeName: 'Billing Document Header',
+                     typeNamePlural: 'Billing Documents',
+                     title: { type: #STANDARD, label: 'Billing Document', value: 'bill_id' }
+                   }
+      }
+annotate entity zsac_c_billing_header with
+{
+  @UI.facet: [
+    {
+      id      : 'Header',
+      type    : #IDENTIFICATION_REFERENCE,
+      label   : 'Billing Document Header',
+      purpose : #STANDARD,
+      position: 10
+    },
+    {
+      id            : 'Item',
+      type          : #LINEITEM_REFERENCE,
+      label         : 'Billing Document Items',
+      purpose       : #STANDARD,
+      targetElement : '_BillingDocumentItem',
+      position      : 20
+    }
+  ]
+
+  @UI: {
+    lineItem:       [ { position: 10, label: 'Billing Document' } ],
+    identification: [ { position: 10, label: 'Billing Document' } ],
+    selectionField: [ { position: 10 } ]
+  }
+  bill_id;
+
+  @UI: {
+    lineItem:       [ { position: 20, label: 'Billing Type' } ],
+    identification: [ { position: 20, label: 'Billing Type' } ],
+    selectionField: [ { position: 20 } ]
+  }
+  bill_type;
+
+  @UI: {
+    lineItem:       [ { position: 30, label: 'Billing Date' } ],
+    identification: [ { position: 30, label: 'Billing Date' } ]
+  }
+  bill_date;
+
+  @UI: {
+    lineItem:       [ { position: 40, label: 'Customer ID' } ],
+    identification: [ { position: 40, label: 'Customer ID' } ],
+    selectionField: [ { position: 30 } ]
+  }
+  customer_id;
+
+  @UI: {
+    lineItem:       [ { position: 50, label: 'Net Amount' } ],
+    identification: [ { position: 50, label: 'Net Amount' } ]
+  }
+  net_amount;
+
+  @UI: {
+    lineItem:       [ { position: 60, label: 'Currency' } ],
+    identification: [ { position: 60, label: 'Currency' } ]
+  }
+  currency;
+
+  @UI: {
+    lineItem:       [ { position: 70, label: 'Sales Organization' } ],
+    identification: [ { position: 70, label: 'Sales Organization' } ]
+  }
+  sales_org;
+
+  @UI: {
+    identification: [ { position: 80, label: 'Created By' } ]
+  }
+  createdby;
+
+  @UI: {
+    identification: [ { position: 90, label: 'Created At' } ]
+  }
+  createdat;
+
+  @UI: {
+    identification: [ { position: 100, label: 'Last Changed By' } ]
+  }
+  lastchangedby;
+
+  @UI: {
+    identification: [ { position: 110, label: 'Last Changed At' } ]
+  }
+  lastchangedat;
+
+  @UI: {
+    identification: [ { position: 120, label: 'Local Last Changed At' } ]
+  }
+  locallastchangedat;
+}

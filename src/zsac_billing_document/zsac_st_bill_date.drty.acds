@@ -1,0 +1,2 @@
+@EndUserText.label: 'Billing Document Date'
+define type zsac_st_bill_date: abap.datn

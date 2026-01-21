@@ -1,0 +1,2 @@
+@EndUserText.label: 'Billing Document Item No'
+define type zsac_st_bill_item_no: abap.numc( 6 )

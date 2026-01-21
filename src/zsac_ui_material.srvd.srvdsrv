@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Material'
+define service Zsac_ui_material {
+  expose zsac_c_material as Material;
+}

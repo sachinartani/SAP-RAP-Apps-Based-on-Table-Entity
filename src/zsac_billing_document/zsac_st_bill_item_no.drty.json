@@ -1,0 +1,8 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "Billing Document Item No",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  }
+}

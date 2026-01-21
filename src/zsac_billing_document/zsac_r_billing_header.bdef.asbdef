@@ -1,0 +1,38 @@
+managed implementation in class zsac_cl_bp_billing_header unique;
+strict ( 2 );
+with draft;
+
+define behavior for zsac_r_billing_header alias BillingDocumentHeader
+//late numbering
+draft table zsac_d_billhead
+lock master total etag lastchangedat
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  field ( readonly ) createdat, createdby, lastchangedby, lastchangedat, locallastchangedat;
+  association _BillingDocumentItem { create; with draft; }
+}
+
+define behavior for zsac_i_billing_item alias BillingDocumentItem
+//late numbering
+draft table zsac_d_billitem
+lock dependent by _BillingDocumentHeader
+authorization dependent by _BillingDocumentHeader
+//etag master <field_name>
+{
+  update;
+  delete;
+
+  field ( readonly ) bill_id, createdat, createdby, lastchangedby, lastchangedat, locallastchangedat;
+  association _BillingDocumentHeader;
+}

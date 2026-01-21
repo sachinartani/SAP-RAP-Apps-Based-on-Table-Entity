@@ -1,0 +1,2 @@
+@EndUserText.label: 'Billing Document Type'
+define type zsac_st_bill_type: abap.char(4)

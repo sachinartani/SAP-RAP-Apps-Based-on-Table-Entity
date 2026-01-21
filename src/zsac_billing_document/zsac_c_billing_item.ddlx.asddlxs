@@ -1,0 +1,92 @@
+@Metadata.layer: #CORE
+@UI: { headerInfo: { typeName: 'Billing Document Item',
+                     typeNamePlural: 'Billing Documents',
+                     title: { type: #STANDARD, label: 'Billing Document', value: 'bill_id' },
+                     description: { type: #STANDARD, label: 'Item', value: 'item_no' }
+                   }
+      }
+annotate entity zsac_c_billing_item
+  with
+{
+  @UI.facet: [
+    {
+      id      : 'Item',
+      type    : #IDENTIFICATION_REFERENCE,
+      label   : 'Billing Document Item',
+      purpose : #STANDARD
+    }
+  ]
+
+  @UI: {
+    lineItem:       [ { position: 10, label: 'Billing Document' } ],
+    identification: [ { position: 10, label: 'Billing Document' } ]
+  }
+  bill_id;
+
+  @UI: {
+    lineItem:       [ { position: 20, label: 'Item Number' } ],
+    identification: [ { position: 20, label: 'Item Number' } ]
+  }
+  item_no;
+
+  @UI: {
+    lineItem:       [ { position: 30, label: 'Material' } ],
+    identification: [ { position: 30, label: 'Material' } ]
+  }
+  material_id;
+
+  @UI: {
+    lineItem:       [ { position: 40, label: 'Description' } ],
+    identification: [ { position: 40, label: 'Description' } ]
+  }
+  description;
+
+  @UI: {
+    lineItem:       [ { position: 50, label: 'Quantity' } ],
+    identification: [ { position: 50, label: 'Quantity' } ]
+  }
+  quantity;
+
+  @UI: {
+    lineItem:       [ { position: 60, label: 'Item Amount' } ],
+    identification: [ { position: 60, label: 'Item Amount' } ]
+  }
+  item_amount;
+
+  @UI: {
+    lineItem:       [ { position: 70, label: 'Currency' } ],
+    identification: [ { position: 70, label: 'Currency' } ]
+  }
+  currency;
+
+  @UI: {
+    lineItem:       [ { position: 80, label: 'Unit of Measure' } ],
+    identification: [ { position: 80, label: 'Unit of Measure' } ]
+  }
+  uom;
+
+  @UI: {
+    identification: [ { position: 90, label: 'Created By' } ]
+  }
+  createdby;
+
+  @UI: {
+    identification: [ { position: 100, label: 'Created At' } ]
+  }
+  createdat;
+
+  @UI: {
+    identification: [ { position: 110, label: 'Last Changed By' } ]
+  }
+  lastchangedby;
+
+  @UI: {
+    identification: [ { position: 120, label: 'Last Changed At' } ]
+  }
+  lastchangedat;
+
+  @UI: {
+    identification: [ { position: 130, label: 'Local Last Changed At' } ]
+  }
+  locallastchangedat;
+}

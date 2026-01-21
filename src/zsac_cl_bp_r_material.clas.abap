@@ -1,0 +1,5 @@
+CLASS zsac_cl_bp_r_material DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zsac_r_material.
+ENDCLASS.
+
+CLASS zsac_cl_bp_r_material IMPLEMENTATION.
+ENDCLASS.
